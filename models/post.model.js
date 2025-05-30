@@ -2,7 +2,7 @@
 
 "use strict";
 
-/* Mongoose-schema för inlägg */
+/* Mongoose-modell för inlägg */
 
 const mongoose = require('mongoose');
 const Joi = require('joi');

@@ -2,7 +2,7 @@
 
 "use strict";
 
-/* Mongoose-schema för projektstatus (progression) */
+/* Mongoose-modell för projektstatus (progression) */
 
 const mongoose = require('mongoose');
 

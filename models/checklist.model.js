@@ -2,7 +2,7 @@
 
 "use strict";
 
-/* Mongoose-schema för checklista */
+/* Mongoose-modell för checklista */
 
 const mongoose = require('mongoose');
 const Joi = require('joi');

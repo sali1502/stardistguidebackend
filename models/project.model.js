@@ -1,4 +1,4 @@
-/* DT140G Guide för webbanvändbarhet. Åsa Lindskog, sali1502@student.miun.se */
+/* DT140G Guide för webbtillgänglighet. Åsa Lindskog, sali1502@student.miun.se */
 
 "use strict";
 

@@ -24,13 +24,13 @@ const ProjectSchema = new Schema({
 // Joi-validering med svenska felmeddelanden
 const projectValidationSchema = Joi.object({
   name: Joi.string()
-    .min(1)
+    .min(3)
     .max(100)
     .required()
     .messages({
       'string.base': 'Projektnamn måste vara en textsträng',
       'string.empty': 'Projektnamn får inte vara tomt',
-      'string.min': 'Projektnamn måste vara minst 1 tecken',
+      'string.min': 'Projektnamn måste vara minst 3 tecken',
       'string.max': 'Projektnamn får inte vara längre än 100 tecken',
       'any.required': 'Projektnamn är obligatoriskt'
     })

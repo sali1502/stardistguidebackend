@@ -7,29 +7,54 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const auth = require('./auth');
 
-const init = async () => {
+// Seedscript
+const bcrypt = require('bcrypt');
+const { User } = require('./models/user.model');
 
+// Seedscript - Skapar default admin om ingen finns i databasen
+const ensureAdminExists = async () => {
+    try {
+        const adminCount = await User.countDocuments({ role: 'admin' });
+        
+        if (adminCount === 0) {
+            await User.create({
+                username: process.env.ADMIN_USERNAME,
+                password: await bcrypt.hash(process.env.ADMIN_PASSWORD, 10),
+                role: 'admin'
+            });
+            
+            console.log('Adminanvändare skapad från environment variables');
+        }
+    } catch (error) {
+        console.error('Fel vid adminsetup:', error);
+    }
+};
+
+const init = async () => {
     // Instans av hapi server
     const server = Hapi.server({
         port: 5000,
         host: 'localhost',
         routes: {
             cors: {
-                origin: ['http://localhost:5173', 'https://www.thunderclient.com', 'http://127.0.0.1:5000'], // Tillåtna domäner
-                credentials: true, // Skicka token i headers
+                origin: ['http://localhost:5173', 'https://www.thunderclient.com', 'http://127.0.0.1:5000'],
+                credentials: true,
                 maxAge: 86400,
-                headers: ["Accept", "Content-Type", "Authorization", "Access-Control-Allow-Origin"],
-                
+                headers: ["Accept", "Content-Type", "Authorization", "Access-Control-Allow-Origin"],                            
             }
         }
     });
 
     // Anslut till MongoDB Atlas
-    mongoose.connect(process.env.DATABASE).then(() => {
+    await mongoose.connect(process.env.DATABASE).then(() => {
         console.log("Ansluten till MongoDB!");
     }).catch((error) => {
         console.error("Fel vid anslutning till databas " + error);
+        process.exit(1);
     });
+
+    // Kör seedscript
+    await ensureAdminExists();
 
     // Registrera JWT auth-strategi
     await auth.register(server);

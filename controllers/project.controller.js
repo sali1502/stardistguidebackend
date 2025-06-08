@@ -12,19 +12,19 @@ const Progress = require('../models/progress.model');
 async function createDefaultChecklists(projectId) {
   const defaultChecklists = {
     designer: [
-      { title: 'Checklistpunkt 1', content: 'Designer - Länk till Digg' },
-      { title: 'Checklistpunkt 2', content: 'Designer - Länk till Digg' },
-      { title: 'Checklistpunkt 3', content: 'Designer - Länk till Digg' }
+      { title: 'Checklistpunkt 1', content: 'Designer - https://www.digg.se' },
+      { title: 'Checklistpunkt 2', content: 'Designer - https://www.digg.se' },
+      { title: 'Checklistpunkt 3', content: 'Designer - https://www.digg.se' }
     ],
     developer: [
-      { title: 'Checklistpunkt 1', content: 'Utvecklare - Länk till Digg' },
-      { title: 'Checklistpunkt 2', content: 'Utvecklare - Länk till Digg' },
-      { title: 'Checklistpunkt 3', content: 'Utvecklare - Länk till Digg' }
+      { title: 'Checklistpunkt 1', content: 'Utvecklare - https://www.digg.se' },
+      { title: 'Checklistpunkt 2', content: 'Utvecklare - https://www.digg.se' },
+      { title: 'Checklistpunkt 3', content: 'Utvecklare - https://www.digg.se' }
     ],
     tester: [
-      { title: 'Checklistpunkt 1', content: 'Testare - Länk till Digg' },
-      { title: 'Checklistpunkt 2', content: 'Testare - Länk till Digg' },
-      { title: 'Checklistpunkt 3', content: 'Testare - Länk till Digg' }
+      { title: 'Checklistpunkt 1', content: 'Testare - https://www.digg.se' },
+      { title: 'Checklistpunkt 2', content: 'Testare - https://www.digg.se' },
+      { title: 'Checklistpunkt 3', content: 'Testare - https://www.digg.se' }
     ]
   };
 

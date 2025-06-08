@@ -37,7 +37,10 @@ const init = async () => {
         host: '0.0.0.0',
         routes: {
             cors: {
-                origin: ['*'],
+               origin: [
+                'http://localhost:5173',  // För lokal utveckling
+                'https://accessibilityguide.netlify.app'  // Netlify URL
+            ],
                 credentials: true,
                 maxAge: 86400,
                 headers: ["Accept", "Content-Type", "Authorization", "Access-Control-Allow-Origin"],                            

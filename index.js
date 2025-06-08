@@ -33,11 +33,11 @@ const ensureAdminExists = async () => {
 const init = async () => {
     // Instans av hapi server
     const server = Hapi.server({
-        port: 5000,
-        host: 'localhost',
+        port: process.env.PORT || 5000,
+        host: '0.0.0.0',
         routes: {
             cors: {
-                origin: ['http://localhost:5173', 'https://www.thunderclient.com', 'http://127.0.0.1:5000'],
+                origin: ['*'],
                 credentials: true,
                 maxAge: 86400,
                 headers: ["Accept", "Content-Type", "Authorization", "Access-Control-Allow-Origin"],                            

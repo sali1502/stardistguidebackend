@@ -1,5 +1,3 @@
-/* DT140G Guide för webbtillgänglighet. Åsa Lindskog, sali1502@student.miun.se */
-
 "use strict";
 
 /* Routes för checklistor */

@@ -1,5 +1,3 @@
-/* DT140G Guide för webbtillgänglighet. Åsa Lindskog, sali1502@student.miun.se */
-
 "use strict";
 
 /* Controllers för projekt */
@@ -12,9 +10,9 @@ const Progress = require('../models/progress.model');
 async function createDefaultChecklists(projectId) {
   const defaultChecklists = {
     designer: [
-      { title: 'Checklistpunkt 1', content: 'Designer - https://www.digg.se' },
-      { title: 'Checklistpunkt 2', content: 'Designer - https://www.digg.se' },
-      { title: 'Checklistpunkt 3', content: 'Designer - https://www.digg.se' }
+      { title: '1.4.1 Användning av färg', content: 'Använd inte enbart färg för att förmedla information, indikera handling eller särskilja element - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/anvand-inte-enbart-farg-for-att-formedla-information' },
+      { title: '1.4.3 Kontrast (minimum)', content: 'Text måste ha minst 4.5:1 kontrast mot bakgrund (3:1 för stor text) - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/anvand-tillracklig-kontrast-mellan-text-och-bakgrund' },
+      { title: '1.4.11 Kontrast för icke-text', content: 'Grafiska element och UI-komponenter måste ha minst 3:1 kontrast - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/anvand-tillrackliga-kontraster-i-komponenter-och-grafik ' }
     ],
     developer: [
       { title: 'Checklistpunkt 1', content: 'Utvecklare - https://www.digg.se' },

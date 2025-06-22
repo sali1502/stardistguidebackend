@@ -48,18 +48,20 @@ async function createDefaultChecklists(projectId) {
       { title: '3.3.1 Felmeddelanden', content: 'Visa tydliga felmeddelanden vid valideringsfel - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/visa-var-ett-fel-uppstatt-och-beskriv-det-tydligt' },
       { title: '3.3.3 Felförslag', content: 'Ge förslag på hur användare kan rätta fel - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/ge-forslag-pa-hur-fel-kan-rattas-till' },
       { title: '3.3.4 Förebyggande av fel', content: 'Låt användare granska/bekräfta viktig information - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/ge-mojlighet-att-angra-korrigera-eller-bekrafta-vid-viktiga-transaktioner' },
-      { title: '4.1.3 Statusmeddelanden', content: 'Använd ARIA live regions för dynamiska meddelanden - Digg: Använd ARIA live regions för dynamiska meddelanden' },
+      { title: '4.1.3 Statusmeddelanden', content: 'Använd ARIA live regions för dynamiska meddelanden - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/se-till-att-hjalpmedel-kan-presentera-meddelanden-som-inte-ar-i-fokus' },
       { title: '2.1.4 Snabbtangenter', content: 'Kortkommandon ska kunna stängas av eller ändras - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/var-forsiktig-med-kortkommandon' },
       { title: '2.5.1 Pekgester', content: 'Funktioner ska kunna aktiveras med enkla klick/tryck - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/erbjud-alternativ-till-komplexa-finger--eller-pekarrorelser' },
       { title: '2.5.2 Pekavbrytning', content: 'Klickhändelser ska aktiveras på "up"-händelsen - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/gor-det-mojligt-att-angra-klick' },
       { title: '2.5.3 Etikett i namn', content: 'Synlig text ska ingå i tillgängligt namn - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/se-till-att-text-pa-knappar-och-kontroller-overensstammer-med-maskinlasbara-namn' },
-      { title: '1.3.4 Orientering', content: 'Tillåt både stående och liggande orientering - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/respektera-anvandarens-installningar' },
+      { title: '1.3.4 Orientering', content: 'Tillåt både stående och liggande orientering - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/se-till-att-innehallet-anpassas-efter-skarmens-riktning' },
       { title: '1.2.2 Textning (inspelad)', content: 'Videor ska ha textning för förinspelat innehåll - Digg: https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/texta-ljudet-i-inspelade-filmer' }
     ],
     tester: [
-      { title: 'Checklistpunkt 1', content: 'Testare - https://www.digg.se' },
-      { title: 'Checklistpunkt 2', content: 'Testare - https://www.digg.se' },
-      { title: 'Checklistpunkt 3', content: 'Testare - https://www.digg.se' }
+      { title: 'Huvudgranskning', content: 'Genomför fullständig granskning enligt Diggs tillsynsmanual - Digg: https://www.digg.se/kunskap-och-stod/digital-tillganglighet/tillsynsmanual-for-granskning-av-webbsidor' },
+      { title: 'Tillgänglighetsredogörelse finns/är uppdaterad', content: '(obligatorisk för offentliga aktörer)' },
+      { title: 'Genomgång av resultat med teamet', content: 'Åtgärdsplan framtagen för identifierade problem' },
+      { title: 'Status bekräftad', content: 'Tidigare åtgärder verifierade som genomförda' }
+
     ]
   };
 
